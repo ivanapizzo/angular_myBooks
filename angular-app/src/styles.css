@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'meta';
+}
+
+
+
+:root {
+
+    --myVarColorA: rgb(146, 92, 29);
+    --myVarColorB:  rgb(156, 58, 22);
+    --myVarColorC: rgba(165, 116, 42, 0.483)
+}
+
+
+@font-face {
+    font-family: meta;
+    src: url(assets/fonts/Metamorphous-Regular.ttf);
+}
+
+@font-face {
+    font-family: EireneBold;
+    src: url(assets/fonts/EireneBold.otf);
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(assets/fonts/RobotoRegular.ttf);
+}
+
+@font-face {
+    font-family: Cinzel;
+    src: url(assets/fonts/Cinzel.ttf);
+}
+
+@font-face {
+    font-family: editorial;
+    src: url(assets/fonts/EditorialNew.otf);
+}
