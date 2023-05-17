@@ -1,0 +1,45 @@
+
+
+<div class="container">
+
+    <div class="child_1">
+            <img src="{{user.photo}}" alt="" class="profile_picture">
+            <div class="child_1_title">
+                    {{user.name}}
+                    {{user.first_last_name}}
+                    <!-- {{user.email}}  -->
+            </div>
+        <div class="child_1_inside">
+
+
+            <!-- {{user.name}} <br>
+            {{user.first_last_name}} <br> -->
+            {{user.email}} <br>
+        </div>
+    </div>
+
+    <div>
+
+    </div>
+
+    <div class="child_2">
+        <div class="child_2_title">
+            Editar datos:
+        </div>
+        <div class="child_2_inside">
+            Nombre <input #name type="text" class="input_1"> <br>
+
+            Apellidos <input #first_last_name type="text" class="input_1"> <br>
+
+            Correo <input #email type="text" class="input_1"> <br>
+
+            Photo <input #photo type="text" class="input_1"> <br>
+        
+            <div class="submit_buttom_container"> <br> <br> <br>
+                <button class="submit_buttom" type="button" (click)="changeUser(name.value,first_last_name.value, email.value, photo.value)"> Modificar </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
