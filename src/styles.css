@@ -40,3 +40,9 @@
     font-family: editorial;
     src: url(assets/fonts/EditorialNew.otf);
 }
+
+
+@font-face {
+    font-family: dinn;
+    src: url(assets/fonts/DINNeuzeitGroteskLT-Light.ttf);
+}
