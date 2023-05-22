@@ -10,6 +10,7 @@
 
 :root {
 
+    --myVarColor0: rgb(241, 241, 49);
     --myVarColorA: rgb(146, 92, 29);
     --myVarColorB:  rgb(156, 58, 22);
     --myVarColorC: rgba(165, 116, 42, 0.483)
