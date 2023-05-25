@@ -12,6 +12,7 @@ import { ProfileComponent } from './component/profile/profile.component';
 import { BooksComponent } from './pages/books/books.component';
 import { PipeIdBookPipe } from './pipes/pipe-id-book.pipe';
 import { PipeUpperLetterPipe } from './pipes/pipe-upper-letter.pipe';
+import { CardComponent } from './component/card/card.component';
 
 
 
@@ -27,6 +28,8 @@ import { PipeUpperLetterPipe } from './pipes/pipe-upper-letter.pipe';
     BooksComponent,
     PipeIdBookPipe,
     PipeUpperLetterPipe,
+    CardComponent,
+
   ],
   imports: [
     BrowserModule,

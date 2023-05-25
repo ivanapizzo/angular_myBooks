@@ -32,4 +32,10 @@ export class BooksComponent {
         let newBook = new Book(id_user, id_book, title, type, author,price, photo);
         this.books.push(newBook);
   }
+
+  deleteBook(selectBook:string):void {
+
+    this.books = this.books.filter(book => book.title !== selectBook)
+
+  }
 }

@@ -14,7 +14,7 @@ export class ProfileComponent {
 
   constructor(){
 
-    this.user = new User(127, "Ivana", "Pizzo Logioio", "ivb.pizzo@gmail.com", "", "https://media.licdn.com/dms/image/D4D03AQHJsuZ6Z5SrHw/profile-displayphoto-shrink_800_800/0/1679954552478?e=2147483647&v=beta&t=5DGJjcJuMLUDT0ORobbfIDepf_ByOjd1KK_NQlCvi_8")
+    this.user = new User(127, "Ivana", "Pizzo Logioio", "ivb.pizzo@gmail.com", "")
 
     
   }

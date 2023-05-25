@@ -1,0 +1,122 @@
+
+
+.button_even_x_container {
+
+    display: flex;
+    justify-content: right;
+
+    margin-right: 7%;
+}
+
+
+
+.button_even_x {
+
+    /* display: block; */
+    
+    text-decoration: none;
+    justify-content: left;
+
+    width: 12%;
+    height: 30px;
+    margin-top: 4%;
+    /* margin-left: 5%; */
+
+    font-family: 'dinn';
+
+    background-color: transparent;
+    border: 0.1px solid black;
+    border-radius: 15px;
+    font-size: 15px;
+}
+
+.button_even_x:hover {
+
+    transition: 0.9s;
+    transform: scale(1.1);
+}
+
+
+.card {
+
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* height: 550px;
+    width: 100px; */
+
+    border: 1px solid black;
+    border-radius: 40px;
+    margin-top: 3%;
+}
+
+
+.card-img-top {
+
+    /* display: inline-block; */
+    height: 300px;
+    width: 200px;
+    /* border: solid 3px rgba(0, 0, 0, 0.69); */
+
+    margin-top: 5%;
+    margin-left: 10%;
+    border-radius: 30px;
+    overflow: hidden;
+    object-fit: conver;
+}
+
+
+.text-body-secondary, .list-group .list-group {
+
+    display: flex;
+    font-family: roboto;
+    font-size: 15px;
+    align-items: center;
+
+}
+
+.card-title {
+
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    font-family: dinn;
+}
+
+
+.card-link {
+
+    font-size: small;
+    text-align: center;
+    font-family: roboto;
+}
+
+
+
+.button_even {
+
+    display: flex;
+    
+    text-decoration: none;
+    justify-content: center;
+    letter-spacing: 1px;
+    width: 40%;
+    height: 50px;
+    margin-bottom: 7%;
+    margin-left: 30%;
+    align-items: center;
+
+    font-family: 'roboto';
+    background-color: rgba(0, 0, 0, 0.598);
+    border: 0.2px solid black;
+    border-radius: 22px;
+    font-size: 15px;
+
+}
+
+.button_even:hover {
+
+    transition: 0.9s;
+    transform: scale(1.1);
+}
+

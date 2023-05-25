@@ -1,28 +1,10 @@
-
-
+<div class="title"> Los más leídos</div>
 <div class="container_books" *ngIf="books.length>0; else noHayLibros">
-    <div *ngFor="let book of books; let par = even">
-        <div class="card-group">
-            <div class="card" style="width: 16rem;" [ngClass]=" par / 2 == 0 ? 'bg-light' : ''" >
-                    <img src="{{book.photo}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-title">{{book.title}}</p>
-                </div>
-                <ul class="list-group">
-                    <li class="list-group">{{book.author}}</li>
-                    <li class="list-group">{{book.price}} €</li>
-                    <li class="list-group">{{book.type}}</li>
-                </ul>
-                    <div class="card-link"> {{book.id_book| pipeBook}} </div>
-                    <br>
-                <button class="button_even" type="button" [ngClass]=" par / 2 === 0 ? 'bg-light' : '' "  >
-                    comprar
-                </button> 
-
-            </div>       <!-- <ul class="card-link">{{book1.id_user}}</ul> -->
-        </div>
-    </div> 
-</div>
+    
+    <ng-container *ngFor="let book of books; let par = even"> 
+        <app-card class="button_even" [book]="book" [par]="par" (selectBook)="deleteBook($event)"></app-card>
+    </ng-container>
+</div> 
 
 <ng-template #noHayLibros>
     <div class="container_books" style="height: 300px;">
@@ -33,7 +15,7 @@
 
 <form class="form_container">
     <h1>
-        New book:
+        new <br> BOOK
     </h1>
     <div>
         <div class="form_child">
@@ -46,17 +28,17 @@
                 <br> <input type="text" placeholder="Author" #author> <br>
                 <br><input type="number" placeholder="Price" #price> <br>
                 <br> <input type="url" placeholder="Photo url" #photo>
+                <div class="button_div">
+                    <button type="reset" class="form_buttom" (click)="addBook(id_user.value, id_book.value, title.value, type.value, author.value, price.value, photo.value)">
+    
+                        Agregar libro
+                    </button>
+    
+                </div>
             </div>
                 <div class="manyBooks_container">
                     <img src="/assets/img/manyBooks.jpeg" alt="" class="manyBooks">
                 </div>
-        </div>
-    <div class="button_div">
-            <button type="button" class="form_buttom" (click)="addBook(id_user.value, id_book.value, title.value, type.value, author.value, price.value, photo.value)">
-
-                Agregar libro
-            </button>
-
         </div>
     </div>
 </form>
