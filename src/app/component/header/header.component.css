@@ -19,20 +19,6 @@ header {
     justify-content: space-evenly;
 }
 
-
-/* .div_img {
-
-    height: 100px;
-    width: 80%;
-}
-
-
-.img_1 {
-
-    height: 300px;
-    width: 100%;
-} */
-
 title {
 
     display: flex;
@@ -40,27 +26,102 @@ title {
     color: white;
     margin-top: 1%;
     font-family: dinn;
+    /* border-bottom: 5px solid var(--myVarColor0); */
+
+    justify-content: center;
+    width: 200px;
+    height: 55px;
+    margin-left: 20%;
 
 }
 
 .div_a {
 
     display: flex;
+
     align-items: center;
+    justify-content: space-evenly;
+
     font-family: dinn;
     
 }
 
-header a {
+header .ab{
 
 
     text-decoration: none;
     font-family: dinn;
     color: white;
     font-size: 15px;
-    justify-content: space-between;
-    margin-right: 30%;
+    /* border: 3px solid pink; */
 
+
+    justify-content: space-evenly;
+    /* margin-right: 30%; */
+    margin-left: 40px;
     
 }
 
+
+header .ab:hover {
+
+
+    color: black;
+    /* font-size: 15.1px; */
+    
+}
+
+
+
+.add_book {
+
+    display: flex;
+
+    text-decoration: none;
+    font-family: dinn;
+    color: white;
+    font-size: 15px;
+
+    margin-left: 30px;
+    justify-content: center;
+
+    border: 2.5px solid var(--myVarColor0);
+    border-radius: 22px;
+    align-items: center;
+    width: 98px;
+    height: 37px;
+} 
+
+
+.add_book:hover {
+
+    background-color: var(--myVarColor0);
+    color: black;
+
+}
+
+
+.profile {
+    
+    display: flex;
+
+    text-decoration: none;
+    font-family: dinn;
+    font-size: 15px;
+    margin-left: 27px;
+    color: var(--myVarColor0);
+    /* border-bottom: solid 3px var(--myVarColor0); */
+
+    /* border-radius: 22px; */
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 25px;
+}
+
+.profile:hover {
+
+    background-color: black;
+    color: black;
+}

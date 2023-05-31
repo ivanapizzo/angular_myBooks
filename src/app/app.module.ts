@@ -13,6 +13,8 @@ import { BooksComponent } from './pages/books/books.component';
 import { PipeIdBookPipe } from './pipes/pipe-id-book.pipe';
 import { PipeUpperLetterPipe } from './pipes/pipe-upper-letter.pipe';
 import { CardComponent } from './component/card/card.component';
+import { AddBookComponent } from './pages/add-book/add-book.component';
+import { UpdateBookComponent } from './pages/update-book/update-book.component';
 
 
 
@@ -29,6 +31,8 @@ import { CardComponent } from './component/card/card.component';
     PipeIdBookPipe,
     PipeUpperLetterPipe,
     CardComponent,
+    AddBookComponent,
+    UpdateBookComponent,
 
   ],
   imports: [

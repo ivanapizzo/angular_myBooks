@@ -1,3 +1,12 @@
+<div class="buscador_container_container">
+    <div class="buscador_container">
+        <input type="reset" class="buscador" type="number" placeholder="Search by title, author, genre or book id..." #buscarLibro>
+            <button (click)="searchingBook(buscarLibro.value)" class="boton_buscador">
+                <img class="lupa_img" src="/assets/img/lupa2.jpg" alt=""> search
+            </button>
+    </div>
+</div>
+
 <div class="title"> Los más leídos</div>
 <div class="container_books" *ngIf="books.length>0; else noHayLibros">
     
@@ -13,35 +22,6 @@
 </ng-template>
 
 
-<form class="form_container">
-    <h1>
-        new <br> BOOK
-    </h1>
-    <div>
-        <div class="form_child">
-            <div class="form_second_child">
-                <br> <br> <br> <br>
-                <br><input type="number" placeholder="id user *" #id_user> <br>
-                <br><input type="number" placeholder="id book *"  #id_book> <br>
-                <br><input type="text" placeholder="Title" #title> <br>
-                <br> <input type="text" placeholder="Type" #type> <br>
-                <br> <input type="text" placeholder="Author" #author> <br>
-                <br><input type="number" placeholder="Price" #price> <br>
-                <br> <input type="url" placeholder="Photo url" #photo>
-                <div class="button_div">
-                    <button type="reset" class="form_buttom" (click)="addBook(id_user.value, id_book.value, title.value, type.value, author.value, price.value, photo.value)">
-    
-                        Agregar libro
-                    </button>
-    
-                </div>
-            </div>
-                <div class="manyBooks_container">
-                    <img src="/assets/img/manyBooks.jpeg" alt="" class="manyBooks">
-                </div>
-        </div>
-    </div>
-</form>
-
-
-<!-- <ul class="card-link">{{book1.id_user}}</ul> -->
+<!-- <div class="lupa_img_container">
+    <svg class="lupa_img" xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27"><g fill="none" fill-rule="evenodd" stroke="#757575" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" transform="translate(1 1)"><line x1="25" x2="17" y1="25" y2="17"/><circle cx="10" cy="10" r="10"/></g></svg>
+    </div>  -->

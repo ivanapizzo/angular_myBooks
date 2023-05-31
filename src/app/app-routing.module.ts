@@ -6,6 +6,8 @@ import { RegisterComponent } from './pages/register/register.component';
 import { ProfileComponent } from './component/profile/profile.component';
 import { BooksComponent } from './pages/books/books.component';
 import { CardComponent } from './component/card/card.component';
+import { AddBookComponent } from './pages/add-book/add-book.component';
+import { UpdateBookComponent } from './pages/update-book/update-book.component';
 
 
 const routes: Routes = [
@@ -13,7 +15,9 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'booksPage', component: BooksComponent},
-  {path: 'card', component: CardComponent}
+  {path: 'card', component: CardComponent},
+  {path: 'add_book', component: AddBookComponent},
+  {path: 'update-book', component: UpdateBookComponent}
 
 
 ];

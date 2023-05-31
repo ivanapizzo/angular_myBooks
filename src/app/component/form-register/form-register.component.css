@@ -137,7 +137,9 @@ form {
 
     height: 50px;
     width: 130px;
-    border: 0.2px solid black;
+    border: none;
+    background-color: black;
+    color: white;
     border-radius: 22px;
     font-size: 15px;
     
@@ -145,7 +147,10 @@ form {
 
 .submit_buttom:hover {
 
-    transition: 0.9s;
-    transform: scale(1.1);
+    /* transition: 0.9s;
+    transform: scale(1.1); */
+
+    color: black;
+    background-color: var(--myVarColor0);
 
 }
