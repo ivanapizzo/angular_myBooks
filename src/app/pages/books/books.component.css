@@ -107,7 +107,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .container_books {
 
-    height: 740px;
+    height: auto;
     display: flex;
 
     justify-content: space-evenly;

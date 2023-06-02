@@ -8,6 +8,8 @@ import { BooksComponent } from './pages/books/books.component';
 import { CardComponent } from './component/card/card.component';
 import { AddBookComponent } from './pages/add-book/add-book.component';
 import { UpdateBookComponent } from './pages/update-book/update-book.component';
+import { LoginComponent } from './pages/login/login.component';
+// import { FormLoginComponent } from './component/form-login/form-login.component';
 
 
 const routes: Routes = [
@@ -17,7 +19,9 @@ const routes: Routes = [
   {path: 'booksPage', component: BooksComponent},
   {path: 'card', component: CardComponent},
   {path: 'add_book', component: AddBookComponent},
-  {path: 'update-book', component: UpdateBookComponent}
+  {path: 'update-book', component: UpdateBookComponent},
+  {path: 'login', component: LoginComponent},
+  // {path: 'form-login', component: FormLoginComponent}
 
 
 ];

@@ -3,11 +3,13 @@
     
     <div class="container_books">
         <div class="card-group">
-            <div class="card" style="width: 16rem;" [ngClass]=" par ? 'bg-light' : 'bg-light'">
+            <div class="card" style="width: 14rem; height: 33rem;" [ngClass]=" par ? 'bg-light' : 'bg-light'">
                 <div class="button_even_x_container">
                     <button class="button_even_x" type="button" (click)="deleteBook()">  x </button>     
                 </div>
-                <img src="{{book.photo}}" class="card-img-top" alt="...">
+                <div class="container_card-img-top">
+                    <img src="{{book.photo}}" class="card-img-top" alt="...">
+                </div>
                     <div class="card-body">
                         <p class="card-title">{{book.title}}</p>
                     </div>
@@ -17,8 +19,9 @@
                             <li class="list-group">{{book.type}}</li>
                         </ul>
                         <div class="card-link"> {{book.id_book| pipeBook}} </div>
-                        <br>
-                    <button class="button_even" type="button" [ngClass]=" par ? 'bg-light' : ''" > Buy</button> 
+                    <div class="container_button_even">
+                        <button class="button_even" type="button" [ngClass]=" par ? 'bg-light' : ''" > Buy</button> 
+                    </div>
                     
             </div>    
         </div>    

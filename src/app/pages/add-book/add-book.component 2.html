@@ -1,0 +1,33 @@
+
+<form class="form_container">
+    <h1>
+        new <br> BOOK
+    </h1>
+    <div>
+        <div class="form_child">
+            <div class="form_second_child">
+                <br> <br> <br> <br>
+                <br><input type="number" placeholder="id user *" #id_user> <br>
+                <br><input type="number" placeholder="id book *"  #id_book> <br>
+                <br><input type="text" placeholder="Title" #title> <br>
+                <br> <input type="text" placeholder="Type" #type> <br>
+                <br> <input type="text" placeholder="Author" #author> <br>
+                <br><input type="number" placeholder="Price" #price> <br>
+                <br> <input type="url" placeholder="Photo url" #photo>
+                <div class="button_div">
+                    <button type="button" type="reset" class="form_buttom" (click)="addBook(id_user.value, id_book.value, title.value, type.value, author.value, price.value, photo.value)">
+    
+                        add book
+                    </button>
+    
+                </div>
+            </div>
+                <div class="manyBooks_container">
+                    <img src="/assets/img/manyBooks.jpeg" alt="" class="manyBooks">
+                </div>
+        </div>
+    </div>
+</form>
+
+
+<!-- <ul class="card-link">{{book1.id_user}}</ul> -->

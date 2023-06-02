@@ -1,8 +1,10 @@
 
 <form class="form_container">
-    <h1>
-    modify <br> BOOK
-    </h1>
+    <div class="h1_container">
+        <div class="h1_child">
+            MODIFY <br> BOOK
+        </div>
+    </div>
         <div class="form_child">
             <div class="form_second_child">
                 <br> <br> <br> <br>
@@ -13,17 +15,15 @@
                 <br> <input type="text" placeholder="Author" #author> <br>
                 <br><input type="number" placeholder="Price" #price> <br>
                 <br> <input type="url" placeholder="Photo url" #photo>
-                <div class="button_div">
-                    <button type="reset" class="form_buttom" (click)="modifyBook(id_user.value, id_book.value, title.value, type.value, author.value, price.value, photo.value)">
-    
-                        update book
-                    </button>
-    
-                </div>
             </div>
         </div>
         
 </form>
+<div class="button_div">
+    <button type="reset" class="form_buttom" (click)="modifyBook(id_user.value, id_book.value, title.value, type.value, author.value, price.value, photo.value)">
+        update book
+    </button>
+</div>
 <!-- <div class="sky_container">
     <img src="/assets/img/sky.jpg" alt="" class="sky">
 </div>

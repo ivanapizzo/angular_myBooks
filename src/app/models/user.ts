@@ -7,7 +7,7 @@ export class User {
     public photo: string;
     public password: string;
 
-    constructor(id_user: number, name: string, first_last_name: string, email: string, password: string, photo: string = "/assets/img/user2.jpg"){
+    constructor(id_user: number, name: string, first_last_name: string, email: string, password: string, photo: string = "/assets/img/yellowPerson4.png"){
 
         this.id_user = id_user;
         this.name = name;

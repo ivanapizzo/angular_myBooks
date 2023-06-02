@@ -9,7 +9,6 @@
 
 <div class="title"> Los más leídos</div>
 <div class="container_books" *ngIf="books.length>0; else noHayLibros">
-    
     <ng-container *ngFor="let book of books; let par = even"> 
         <app-card class="button_even" [book]="book" [par]="par" (selectBook)="deleteBook($event)"></app-card>
     </ng-container>

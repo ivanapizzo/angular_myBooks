@@ -1,0 +1,27 @@
+<form [formGroup]="myForm" class="container" (ngSubmit)="onSubmit()">
+
+        <label>Email
+            <input type="email" class="form-control" formControlName="email" required
+            [ngClass]="{'is-invalid': (myForm.get(email).dirty || myForm.get('email').touched) && !myForm.get('email').valid}">
+            <div *ngIf="!myForm.get('email').valid" class="invalid-feedback">
+                Email is neccesary **
+            </div>
+
+        </label>
+
+        <label> Password
+            <input type="password" class="formcontrol" formControlName="password" required
+            [ngClass]="{'is-invalid': (myForm.get(password).dirty || myForm.get('password').touched) && !myForm.get('password').valid}">
+            <div *ngIf="!myForm.get('password').valid" class="invalid-feedback">
+                <div ngIf="myForm.get('password').errors.required"></div>password is necessary **
+                <div *ngIf="myForm.get('password').errors.minlenght">password has at least 8 characters ** </div>
+            </div>
+        </label>
+
+        <div class="button_form_container">
+            <button class="button_form"  [disabled]="myForm.invalid">
+                Submit
+            </button>
+        </div>
+
+</form>
