@@ -38,13 +38,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     UpdateBookComponent,
     LoginComponent,
     FormLoginComponent,
-    FormsModule, 
-    ReactiveFormsModule,
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule, 
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

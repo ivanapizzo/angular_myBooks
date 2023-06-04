@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { User } from 'src/app/models/user';
 
+
 @Component({
   selector: 'app-form-login',
   templateUrl: './form-login.component.html',
@@ -11,7 +12,8 @@ export class FormLoginComponent {
 
   public myForm : FormGroup;
 
-  constructor( private formBuilder: FormBuilder) {
+
+  constructor( private formBuilder: FormBuilder ) {
 
     this.buildForm();
   }

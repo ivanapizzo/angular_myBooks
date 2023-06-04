@@ -1,9 +1,151 @@
-
-
-.container {
+form {
 
     display: flex;
 
-    height: 700px;
-    width: 100%;
+    height: 550px;
+    width: 410px;
+    text-decoration: none;
+    outline: none;
+    background-color: transparent;
+
+
+    justify-content: center;
+    align-items: center;
+    /* border: 3px solid rgb(67, 120, 6); */
+
+}
+
+.img_form {
+
+    display: flex;
+    width: 300px;
+    height: 300px;
+
+    justify-content: center;
+}
+
+
+.img_form_container {
+
+    display: flex;
+
+    height: 370px;
+    width: 380px;
+    /* border: 3px solid blue; */
+
+    justify-content: center;
+}
+
+.myForm_first_child {
+
+    display: flex;
+
+    height: 300px;
+    width: 380px;
+    /* border: 3px solid var(--myVarColor0); */
+
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 3%;
+}
+
+
+.myForm_little_child {
+
+    
+    display: block;
+
+    height:200px;
+    width: 300px;
+    /* border: 3px solid brown; */
+
+}
+
+label {
+
+    display: inline-block;
+    font-family: roboto;
+    font-size: 14px;
+
+    text-decoration: none;
+    outline: none;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+input {
+
+    /* display: block; */
+    border: none;
+    border-bottom: 0.5px solid rgba(128, 128, 128, 0.495);
+    outline: none;
+    /* margin-top: 0.5%; */
+    border-radius: 1px;
+
+
+    height: 30px;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+
+    font-family: roboto;
+    font-size: 12px;
+    color: black;
+}
+
+.invalid-feedback {
+
+    font-family: roboto;
+}
+
+.button_form_container {
+
+    display: flex;
+
+    margin-top: 5%;
+
+    height: 70px;
+    width: 294px;
+    
+    /* border: 3px solid rgb(130, 218, 238); */
+
+    text-decoration: none;
+    outline: none;
+
+    justify-content: center;
+    align-items: center;
+
+    /* border: none; */
+    
+
+}
+
+.button_form {
+
+    display: flex;
+
+    text-decoration: none;
+    font-family: roboto;
+    letter-spacing: 1px;
+
+    height: 50px;
+    width: 130px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 22px;
+    font-size: 15px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.button_form:hover {
+
+    color: black;
+    background-color: var(--myVarColor0);
 }

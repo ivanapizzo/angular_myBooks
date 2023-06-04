@@ -6,6 +6,25 @@
     --myVarColorA: rgb(238, 156, 62);
 }
 
+/* .div_img {
+
+    display: flex;
+
+    justify-content: right;
+
+    width: 300px;
+    height: 100px;
+
+    border: 3px solid red;
+}
+
+
+.img_logoBooks {
+
+    height: 80px;
+    width: 90px;
+} */
+
 
 header {
 
@@ -19,7 +38,7 @@ header {
     justify-content: space-evenly;
 }
 
-title {
+.title {
 
     display: flex;
     font-size: 40px;
@@ -28,10 +47,10 @@ title {
     font-family: dinn;
     /* border-bottom: 5px solid var(--myVarColor0); */
 
-    justify-content: center;
+    justify-content: left;
     width: 200px;
     height: 55px;
-    margin-left: 30%;
+    margin-left: 20%;
 
 }
 
