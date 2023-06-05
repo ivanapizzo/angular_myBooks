@@ -79,6 +79,28 @@ form {
 
 }
 
+.invalid_input {
+
+    font-family: roboto;
+    color: rgb(69, 57, 57);
+
+}
+
+.invalid_input_b {
+
+    font-family: roboto;
+    color: red;
+    font-size: 10px;
+
+}
+
+
+.invalid_feedback {
+
+    color: red;
+    font-family: roboto;
+}
+
 
 .n {
 

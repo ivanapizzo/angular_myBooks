@@ -9,32 +9,48 @@
         NUEVA <br> CUENTA
     </div>
 
-    <form class="form"> 
+    <form class="form" [formGroup]="myForm" (ngSubmit)="onSubmit()"> 
 
         <div class="form_inputs">
-            <!-- Nombre * <br> -->
-        <input placeholder="Nombre *" type="text" class="n">
+        <input formControlName="name" placeholder="Name *" type="text" class="n" required
+        [ngClass]="{is_invalid: (myForm.get('name').dirty || myForm.get('name').touched) && !myForm.get('name').valid}">
+        <div *ngIf="!myForm.get('name').valid" class="invalid_input">name is necessary
+            <div *ngIf="myForm.get('name').errors.minlength" class="invalid_input_b">at least three characters</div>
+        </div>
         <br>
         <br>
-        <!-- Apellido * <br> -->
-        <input placeholder="Apellidos *" type="text"class="n">
-        <br>
-        <br>
-        <!-- url *<br><br> -->
-        <input placeholder="Url *" type="text"class="n">
-        <br>
-        <br>
-        <!-- Correo Electrónico *<br> -->
-        <input placeholder="Correo electrónico *" type="text"class="n">
-        <br>
-        <br>
-        <!-- Contraseña *<br> -->
-        <input placeholder="Contraseña *" type="password"class="n">
-        <br>
-        <br>
-        <!-- Reescribe la contraseña *<br> -->
-        <input placeholder="Reescribe la contraseña *" type="password"class="n">
+        <input formControlName="lastName" placeholder="Last name *" type="text"class="n" required
+        [ngClass]="{is_invalid: (myForm.get('lastName').dirty || myForm.get('lastName').touched) && !myForm.get('lastName').valid}">
+        <div *ngIf="!myForm.get('lastName').valid">
+            <div *ngIf="myForm.get('lastName').errors.required" class="invalid_input">last name is necessary</div>
+            <div *ngIf="myForm.get('lastName').errors.minlength" class="invalid_input_b">at least three characters</div>
 
+        </div>
+        <br>
+        <br>
+        <input formControlName="url" placeholder="Url" type="text"class="n">
+        <br>
+        <br>
+        <input formControlName="email" placeholder="Email *" type="text"class="n" required
+        [ngClass]="{is_invalid: (myForm.get('email').dirty || myForm.get('email').touched) && !myForm.get('email').valid}">
+        <div *ngIf="!myForm.get('email').valid">
+            <div *ngIf="myForm.get('email').errors.required" class="invalid_input">email is necessary</div>
+            <div *ngIf="myForm.get('email').errors.email" class="invalid_input_b">please, input a correct email address</div>
+        </div>
+        <br>
+        <br>
+        <input formControlName="password" placeholder="Password *" type="password"class="n" required
+        [ngClass]="{is_invalid: (myForm.get('password').dirty || myForm.get('password').touched) && !myForm.get('password').valid}">
+        <div *ngIf="!myForm.get('password').valid" class="invalid_input">password must have at least eight characters
+            <div *ngIf="myForm.get('password').errors.minlength" class="invalid_input_b">please, input a correct password</div>
+        </div>
+        <br>
+        <br>
+        <input formControlName="retypePassword" placeholder="Retype password *" type="password"class="n" required
+        [ngClass]="{is_invalid: (myForm.get('retypePassword').dirty || myForm.get('retypePassword').touched) && !myForm.get('retypePassword').valid}">
+        <div *ngIf="!myForm.get('retypePassword').valid" class="invalid_input">please, retype password
+            <div *ngIf="myForm.get('retypePassword').errors.minlength" class="invalid_input_b">password is not correct</div>
+        </div>
         <br>
         <br>
 
@@ -49,7 +65,7 @@
         <br>
         <br>
         <div class="submit_buttom_container">
-            <input value="continuar" type="submit" class="submit_buttom" type="button">
+            <input value="continuar" type="submit" class="submit_buttom" (click)="register()" [disabled]="myForm.invalid">
         </div>
 
     </div>
