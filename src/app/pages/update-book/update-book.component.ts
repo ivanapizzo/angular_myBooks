@@ -14,16 +14,29 @@ export class UpdateBookComponent {
   public books: Book[];
 
   constructor(public BookService: BooksService, private router: Router) {
-    this.BookService.getAll()
+    this.BookService.getAll().subscribe((data:Book[]) => {
+      this.books = data;
+      console.log(data);
+    })
   }
 
-  
+/// putBook  
 
   modifyBook(id_user: number, id_book: number , title:string, type:string, author:string, price:number, photo:string) {
 
-    let changeBook = new Book(id_user, id_book, title, type, author, price, photo);
+      let book = new Book(
+        id_user, 
+        id_book, 
+        title, 
+        type, 
+        author, 
+        price, 
+        photo);
 
-      this.BookService.edit(changeBook);
+      this.BookService.edit(book).subscribe((data:Book[]) => {
+        this.books = data;
+        // console.log(data);
+      })
       this.router.navigateByUrl('/booksPage');
 
   }

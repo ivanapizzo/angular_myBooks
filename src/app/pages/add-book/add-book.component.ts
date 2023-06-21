@@ -13,15 +13,32 @@ export class AddBookComponent {
   public books: Book[];
   
   constructor(public booksService: BooksService, private router: Router){
-    this.books = this.booksService.getAll();
+    this.booksService.getAll().subscribe((data:Book[]) => {
+      this.books = data;
+      console.log(data);
+    })
   }
 
-  
+  /// asignación = !!!!!!! this.books = data, le asignamos data a los books
+
+  //// postBooks
 
     addBook(id_user:number, id_book:number, title:string, type:string, author:string, price:number, photo:string):void {
 
-      this.booksService.add(new Book(id_book, id_user, title, type, author, price, photo));
-      this.router.navigateByUrl('/booksPage');
+      let book = new Book(
+              id_book, 
+              id_user, 
+              title, 
+              type, 
+              author, 
+              price, 
+              photo);
+
+      this.booksService.add(book).subscribe((data:Book[])=> {
+        this.books = data;
+        console.log(data);
+        this.router.navigateByUrl('/booksPage');
+      })
   }
 
 }
