@@ -19,16 +19,13 @@
         </div>
         <br>
         <br>
-        <input formControlName="lastName" placeholder="Last name *" type="text"class="n" required
-        [ngClass]="{is_invalid: (myForm.get('lastName').dirty || myForm.get('lastName').touched) && !myForm.get('lastName').valid}">
-        <div *ngIf="!myForm.get('lastName').valid">
-            <div *ngIf="myForm.get('lastName').errors.required" class="invalid_input">last name is necessary</div>
-            <div *ngIf="myForm.get('lastName').errors.minlength" class="invalid_input_b">at least three characters</div>
+        <input formControlName="first_last_name" placeholder="First last name *" type="text"class="n" required
+        [ngClass]="{is_invalid: (myForm.get('first_last_name').dirty || myForm.get('first_last_name').touched) && !myForm.get('first_last_name').valid}">
+        <div *ngIf="!myForm.get('first_last_name').valid">
+            <div *ngIf="myForm.get('first_last_name').errors.required" class="invalid_input">last name is necessary</div>
+            <div *ngIf="myForm.get('first_last_name').errors.minlength" class="invalid_input_b">at least three characters</div>
 
         </div>
-        <br>
-        <br>
-        <input formControlName="url" placeholder="Url" type="text"class="n">
         <br>
         <br>
         <input formControlName="email" placeholder="Email *" type="text"class="n" required
@@ -53,7 +50,14 @@
         </div>
         <br>
         <br>
-
+        <input formControlName="photo" placeholder="Photo" type="text"class="n">
+        <!-- required
+        [ngClass] = "{is_invalid: (myForm.get('photo').dirty || myForm.get('photo').touched) && !myForm.get('photo').valid}"> -->
+        <!-- <div *ngIf="!myForm.get('photo').valid" class="invalid_input">url photo must have at least eight characters
+            <div *ngIf="myForm.get('photo').errors.minlength" class="invalid_input_b">please, input a correct url</div>
+        </div> -->
+        <br>
+        <br>
         </div>
     </form>
     <div class="form_checkbox">
@@ -65,7 +69,7 @@
         <br>
         <br>
         <div class="submit_buttom_container">
-            <input value="continuar" type="submit" class="submit_buttom" (click)="register()" [disabled]="myForm.invalid">
+            <input value="continuar" type="submit" class="submit_buttom" (click)="onSubmit()" [disabled]="myForm.invalid">
         </div>
 
     </div>

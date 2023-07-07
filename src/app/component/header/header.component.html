@@ -9,19 +9,21 @@
                 My books
             </div>
 
-            <div class="div_a">
+            <div class="div_a" *ngIf="!this.UserService.logueado; else logueado">
                 <a class="ab" routerLink="home">home</a>
                 <a class="ab" routerLink="register">register</a>
-                <a class="ab" routerLink="booksPage">books</a>
-                <a class="ab" routerLink="update-book">update book</a>
-                <a class="ab" routerLink="profile">profile</a>
-                <a class="add_book" routerLink="add_book">Add book</a>
                 <a class="login" routerLink="login">
                     <img src="/assets/img/yellowPerson4.png" alt="">
                 </a>
             </div>
+
+            <ng-template #logueado>
+            <div class="div_a">
+                <a class="ab" routerLink="booksPage">books</a>
+                <a class="ab" routerLink="update-book">update book</a>
+                <a class="ab" routerLink="profile">profile</a>
+                <a class="add_book" routerLink="add_book">Add book</a>
+            </div>
+            </ng-template>
+
         </header>
-
-        <div class="body">
-
-        </div>
