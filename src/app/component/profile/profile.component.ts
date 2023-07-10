@@ -39,19 +39,19 @@ export class ProfileComponent {
 
     let modify: boolean = false;
 
-    if (name != null) {
+    if (name != '') {
       this.user.name = name;
       modify = true;
     }
-    if (first_last_name != null){
+    if (first_last_name != ''){
       this.user.first_last_name = first_last_name;
       modify = true;
     }
-    if (email != null) {
+    if (email != '') {
       this.user.email = email;
       modify = true;
     }
-    if (photo != null){
+    if (photo != ''){
       this.user.photo = photo;
       modify = true;
     }

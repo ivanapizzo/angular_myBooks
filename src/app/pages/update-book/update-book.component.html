@@ -8,7 +8,7 @@
         <div class="form_child">
             <div class="form_second_child">
                 <br> <br> <br> <br>
-                <br><input type="number" placeholder="id user *" #id_user> <br>
+                <!-- <br><input type="number" placeholder="id user *" #id_user> <br> -->
                 <br><input type="number" placeholder="id book *"  #id_book> <br>
                 <br><input type="text" placeholder="Title" #title> <br>
                 <br> <input type="text" placeholder="Type" #type> <br>
@@ -20,7 +20,7 @@
         
 </form>
 <div class="button_div">
-    <button type="reset" class="form_buttom" (click)="modifyBook(id_user.value, id_book.value, title.value, type.value, author.value, price.value, photo.value)">
+    <button type="reset" class="form_buttom" (click)="modifyBook(0, id_book.value, title.value, type.value, author.value, price.value, photo.value)">
         update book
     </button>
 </div>

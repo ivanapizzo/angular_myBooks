@@ -1,12 +1,12 @@
 export class Book {
 
-    id_user: number;
-    id_book: number;
-    title: string;
-    type: string;
-    author: string;
-    price: number;
-    photo: string;
+    public id_user: number;
+    public id_book: number;
+    public title: string;
+    public type: string;
+    public author: string;
+    public price: number;
+    public photo: string;
 
     constructor (id_user:number, id_book:number, title:string, type:string, author: string, price:number, photo:string) {
 

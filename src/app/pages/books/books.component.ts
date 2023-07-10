@@ -34,58 +34,71 @@ export class BooksComponent {
     })
   }
 
-// corregir deleteBook para que el libro se elimine al instante. Ahora se elimina solo si cambiamos de pagina primero
+// agregar slide para  corregir deleteBook para que el libro se elimine al instante. Ahora se elimina solo si cambiamos de pagina primero OK
 
   deleteBook(id_book:number):void {
 
     this.booksService.delete(id_book).subscribe((data:any) => {
-      // if (data) {
-      //   this.booksService.getAll().subscribe((data:Book[]) =>{
-      //     this.books = data;
-          console.log(data);
-        });
-      // }
-    }
-  //   )
+      for (let i = 0; i < this.books.length; i++) {
+        if (this.books[i].id_book == id_book){
+          this.books.splice(i,1);
+        }
+      }
+      console.log(data);
+    });
+  }
 
+  // Devuelve true si lo borra o false si no lo borra
+
+  // delete(id_book:number):boolean {
+  //   for(let i = 0; i < this.books.length; i++) {
+  //       if (this.books[i].id_book == id_book) {
+  //         this.books.splice(i, 1);
+  //       }
+  //   }
+  //   return true;
   // }
 
 
-  searchingBook(id_book:number): void {
+  /// SEEEARRRCHINNNNNG 
 
-    if(id_book){
+  // searchingBook(id_book:number): void {
 
-          this.booksService.getOne(id_book).subscribe((data:Book[]) =>{
-            this.books = data
-            console.log(data);
-          })
-        } else {
-          this.booksService.getAll().subscribe((data:Book[]) => {
-            this.books = data;
-            console.log(data)
-          })
-        }
+  //   if(id_book){
 
-      }
-  }
+  //         this.booksService.getOne(id_book).subscribe((data:Book[]) =>{
+  //           this.books = data
+  //           console.log(data);
+  //         })
+  //       } else {
+  //         this.booksService.getAll().subscribe((data:Book[]) => {
+  //           this.books = data;
+  //           console.log(data)
+  //         })
+  //       }
+
+  //     }
+  
 
 
     //// asignacion = !! if(id_book) solo pasando parametro que voy a usar
   //// 
 
-  // searchingBook2(id_book:number): void {
 
-  //   if(id_book){
-  //     this.books = this.booksService.getOne(id_book);
-  //     this.booksService.getOne(id_book).subscribe((data:Book[]) =>{
-  //       this.books = data
-  //       console.log(data);
-  //     });
-  //     } else {
-  //       this.booksService.getAll().subscribe((data:Book[]) =>{
-  //         this.books = data
-  //         console.log(data);
-  //       });
-  //     }
-      
-  // }
+  searchingBook(id_book:number):void {
+
+    if(id_book != 0){
+        this.booksService.getOne(id_book).subscribe((data:any) =>{
+                this.books = data.data;
+                console.log(data)
+              })
+        }
+        else {
+          this.booksService.getAll().subscribe((data:any) => {
+            this.books = data.data;
+            console.log(data)
+          })
+          }
+  
+    }
+}
